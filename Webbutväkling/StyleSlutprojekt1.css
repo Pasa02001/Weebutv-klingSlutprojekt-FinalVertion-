@@ -1,0 +1,235 @@
+﻿
+.Om { /*Klass som ligger inne i bodyn*/
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;/*Fonten på Om sidan*/
+    display: grid; /*Att den ska vara en grid*/
+    grid-template-columns: 5% 1fr 1fr 1fr 5%;/*Antal colummner*/
+    grid-template-rows: auto auto auto auto;/*antal rows*/
+    grid-template-areas: /*Gridar ut laggda för sidans struktur */
+        "..... header header header ......" 
+        "..... main main main....."
+        "..... footer footer footer .....";
+}
+.Om > main { /*Mian är mindre så det ligger på Om */
+    background-color: white; /*Backgrund*/
+    align-content: center; /*Alla block ska ligga i centrum*/
+    text-align:center;/*Texten ska sentreras*/
+}
+* > .Om { /*Om ligger under rästen*/
+    background-color: aliceblue;/*backgrund färg*/
+}
+p { /*Text tag*/
+    font-size: 1rem;  /*Storlek av text tagg*/
+}
+
+
+/*Header start*/
+header {
+    grid-area: header; /*Sickas in i alla grid-tamplet-arias*/
+    display:grid; /*Att den ska vara en grid*/
+    grid-template-columns: 15% 1fr 15%; /*Antal colummner*/
+    align-items:center; /*Alla block ska ligga i centrum*/
+    background-color: gray;/*backgrund färg*/
+    max-height: 100px; /*maximal höjden */
+    text-align:center; /*Texten ska sentreras*/
+}
+ #loggan { /*logg bilden*/
+     width: 30%; /*Bredden*/
+     border-radius: 40px; /*Avrundade kanter*/
+ }
+  
+ /*Dropdown START (innuti NAV)*/
+.dropbth { /*Knappen dropdown*/
+    background-color: white; /*Backgrunds färgen på dropdown knappen */
+    color: gray; /*Färgen på text i knappen */ 
+    display:block; /*Visa block*/
+    padding: 10%; /*Sido avstånd*/
+    margin: auto; /*Runt avstånd*/
+    border-radius: 10px; /*Avrundade kanter*/
+    
+    
+}
+.dropdown { /*Innuti dropdown */
+    position: relative; /*Positionen är inte fasstsat*/
+    display: inline-block; /* Visar en inline-block*/
+    
+}
+
+.dropdown-content { /*innuti Dropsown*/
+    display: none; /*Visa inget*/
+    position: absolute; /*Kan inte flytta på sig*/
+    background-color: white; /*bakgrunden*/
+    min-width: 160px; /*minsta tjockleken*/
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /*Boxens skugga runt*/
+}
+
+.dropdown-content a { /*a taggarna i dropdownwn*/
+        color: black; /*text färg*/
+        padding: 12px 16px; /*Mällan avståndet*/
+        text-decoration: none; /*Tar bort understräk*/
+        display: block; /*Visa block*/
+    }
+.dropdown-content a:hover { /*När man är över med musen*/
+        background-color: gray; /*Bakgrund*/
+}
+.dropdown:hover .dropdown-content { /*Visa när musen är över*/
+    display: block;/*visa block*/
+}
+.dropdown:hover .dropbtn { /*Visa när musen är över*/
+    background-color: gray; /*backgrund*/
+}
+/*Dropdown END*/
+/*Slutet på allt som finns i header*/
+
+section {
+    background-color: lightgray; /*backgrund*/
+    grid-area: section; /*Sickas in i alla grid-tamplet-arias*/
+    grid-auto-rows: 30em; /*Längden av rows'en*/
+    display: grid; /*visa grid*/
+    width: 30%; /*tjockleken*/
+}
+
+
+
+/*Main*/
+main {
+    grid-area: main; /*Sickas in i alla grid-tamplet-arias*/
+    display: grid; /*visa grid*/
+    grid-template-columns: 1fr 1fr; /*Antal colummner*/
+    grid-template-rows: auto auto; /*antal rows*/
+    grid-template-rows: minmax(200px,auto); /*minst 200px störst auto*/
+    grid-gap: 10px; /*Mellan griddarna*/
+    align-items: center; /*Centrera alla blocks*/
+    text-align: center; /*Centrera text*/
+}
+.exempel { 
+    border: 2px solid black; /*Border runt*/
+}
+h3 { 
+    font-size: 3em; /*Storlek*/
+}
+.MainImage {
+    width: 60%; /*Tjocklek*/
+    border-radius: 8px; /*Runda hörn*/
+    display: block; /*Visa block*/
+    margin-right: auto; /*magrin till höger*/
+    margin-left:auto; /*magrin till vänster*/
+}
+img { /* alla bilder*/
+    border: 1px solid black; /*Border runt*/
+}
+
+/*Dator infomation START */
+
+table { 
+    border-collapse: collapse; /*Slår ihop barigärerna*/
+    width: 100%; /*tjocklek*/
+}
+
+th {
+    padding: 8px; /*spac mellan*/
+}
+tr:nth-child(even){ /* Bara gämna tr får denna fuktion*/
+    background-color: #c3c3c3; /*Backgrund*/
+}
+td {
+    font-size: x-large; /*Lika stro som x*/
+}
+th, td {
+    border: 1px solid black; /*Border */
+    border: 1px solid #d3d3d3; /*Barigären*/
+}
+
+/*Dator info SLUT*/
+/*Main SLUT*/
+
+dl { 
+    list-style-type: none; /*tar bort list typen*/
+    margin-left:auto;
+    margin-right:auto;
+    
+}
+
+dd {
+    float: left; /*flyta ut listan(Diagonalt)*/
+    text-align: center; /*text i center*/
+    font-size: 2em; /*font storlek*/
+    display: block; /*Visa block*/
+    background-color: gray; /* backgrund*/
+    border: 1px solid black; /*barigär*/
+    border-radius: 50px; /*Runda hörn*/
+    width: 130%; /*tjockleken*/
+}
+
+/*footer start*/
+footer {
+    grid-area: footer; /*Sickas in i alla grid-tamplet-arias*/
+    display: grid; /*Att det ska vara en grid*/
+    background-color: gray; /*backgrund*/
+    text-align: center; /*text i centrum*/
+    align-items: center; /*alla block i sentrum*/
+    grid-template-columns: 50% 50%; /*Colummerna*/
+}
+ul {
+    list-style-type: none; /*tar bort list typen*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sublista {
+    float: left; /*flyta ut listan(Diagonalt)*/
+    text-align: center; /*text i center*/
+    font-size: 2em; /*font storlek*/
+    display: block; /*Visa block*/
+    background-color: gray; /* backgrund*/
+    border: 1px solid black; /*barigär*/
+    border-radius: 50px; /*Runda hörn*/
+    width: 20vw; /*tjockleken*/
+}
+
+/*LoVe Focus Hate*/
+a:link{
+    text-decoration: none;
+}
+
+a:visited{
+    color: purple;
+
+}
+a:focus{
+
+    border-radius:0;
+
+}
+a:hover{
+        background-color: red; /*när man är över med Muspekaren*/
+}
+
+
+
+
+ 
+
+/*GamingLaptop KAtikor börjar*/
+.Laptops {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;/*Fonten på Om sidan*/
+    display: grid; /*Visa grid*/
+    grid-template-columns: 5% 1fr 1fr 1fr 5%;/*Colummerna*/
+    grid-template-rows: auto auto auto auto; /*Rows*/
+    grid-template-areas: 
+        "header header header header header"
+        "main main main main main " 
+        "footer footer footer footer footer";
+}
+.Home {
+    background-image: url(Bilder/LaptopBackground.jpeg); /*Bakgrunds bilden*/
+    background-repeat: no-repeat; /*backgrunder ska inte upprepas*/
+    background-size: 100%; /*backgrund storlek*/
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;/*Fonten på Om sidan*/
+    display: grid; /*Visa griddar*/
+    grid-template-columns: 5% 1fr 1fr 5%; /*Colummerna*/
+    grid-template-areas: 
+        "header header header header" 
+        "..... main  main ....." 
+        "..... section  section  ...." 
+        "footer footer footer footer ";
+}

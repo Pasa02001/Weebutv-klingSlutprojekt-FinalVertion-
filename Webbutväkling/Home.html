@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+
+<html lang="sv">
+    <head>
+        <meta charset="utf-8" />
+        <title>Home</title>
+        <link href="StyleSlutprojekt1.css" rel="stylesheet" />
+    </head>
+    <body class="Home">
+
+
+
+        <header>
+            <!--Hderstart-->
+
+            <img src="Bilder/apple.png" alt="loggan" id="loggan" /><!--Apple bild på loggan -->
+
+
+            <h1>Home</h1> <!--Rubrik längst up-->
+
+            <nav class="dropdown">
+                <!--Navigationen (En drop down)-->
+
+                <button class="dropbth">NAV</button> <!--En knapp med classen dropbth-->
+
+                <div class="dropdown-content">
+                    <!--En DIV för att ha en kontainer med dropdown content(alla länkar till HTML dokumet)-->
+                    <a href="GamingLaptops.html">GamingLaptops </a> <!--Länk till Gaming Laptops-->
+                    <a href="JobbLaptop.html">JobbLaptop </a> <!--Länk till Jobblaptops-->
+                    <a href="TermsOfService.html">Terms of servis</a> <!--Länk till terms of servic-->
+                    <a href="Om.html">Om</a> <!--LÄnk till Om -->
+                    <a href="Home.html">Home</a><!--Länk till home -->
+                </div>
+            </nav> <!-- Slut på NAV-->
+
+        </header> <!--Slut på Header-->
+
+        <main>
+            <!--Lsita för två klickbara knappar i mitten -->
+            <ul class="sublista">
+                <li><a href="JobbLaptop.html">Jobb Laptop </a></li>
+            </ul>
+
+            <ul class="sublista">
+                <li><a href="GamingLaptops.html">Gaming Laptops </a></li>
+            </ul>
+        </main>
+
+
+        <section class="gridForm">
+            <form action="blank" method="POST" id="datorForm">
+                <fieldset>
+                    <!--Beskrivning av formen-->
+                    <legend>Personlig information</legend>
+
+                    <label for="namn">Namn:</label>
+                    <input type="text" id="namn" name="namn" placeholder="Ditt namn">
+                    <br />
+                    <!--Lösenordsinput-->
+                    <label for="password">Ditt lösenord</label>
+                    <input type="password" id="password" name="password" />
+
+
+                    <!--Radiobuttons-->
+                    <p>Kön:</p>
+                    <input type="radio" id="man" name="gender" value="man" />
+                    <label for="man">Manlig</label><br>
+
+
+                    <input type="radio" id="Kvinna" name="gender" value="Kvinna" />
+                    <label for="Kvinna">Kvinnlig</label><br>
+
+
+                    <input type="radio" id="annat" name="gender" value="annat" />
+                    <label for="annat">Annat</label><br>
+
+                </fieldset>
+                <label>Skriv din text i rutan:</label>
+                <textarea name="inputext" form="datorForm">Skriv din egen text här...</textarea>
+                <br />
+                <input type="submit" value="Skicka">
+            </form>
+
+            <!--Textruta för input-->
+        </section>
+
+
+        <footer>
+            <!--Start på footern-->
+
+            <ul>
+                <!--Start på en lista -->
+                <li><a href="GamingLaptops.html">GamingLaptops </a></li> <!--I listan finns det en länk-->
+                <li><a href="JobbLaptop.html">JobbLaptop </a></li><!--Länk till JobbLaptop i listn-->
+                <li><a href="TermsOfService.html">Terms of servis</a></li><!--Länk till TermsOfService i listn-->
+                <li><a href="Om.html">Om</a></li><!--Länk till Om i listn-->
+                <li><a href="Home.html">Home</a></li><!--Länk till Home i listn-->
+            </ul>
+
+
+
+            <ul>
+                <!--Ennu en lista för sociala medier-->
+                <li>Fasbook</li><!--Bara text ingen fuktion-->
+                <li>Intagram</li> <!--o-->
+                <li>Snapchat</li> <!--o-->
+            </ul>
+        </footer><!--Slut på footer-->
+
+
+    </body>
+</html>
