@@ -1,5 +1,6 @@
 ﻿
 .Om { /*Klass som ligger inne i bodyn*/
+    background-color: aliceblue;/*backgrund färg*/
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;/*Fonten på Om sidan*/
     display: grid; /*Att den ska vara en grid*/
     grid-template-columns: 5% 1fr 1fr 1fr 5%;/*Antal colummner*/
@@ -9,15 +10,13 @@
         "..... main main main....."
         "..... footer footer footer .....";
 }
-.Om > main { /*Mian är mindre så det ligger på Om */
+.Om > main { /*barnselektor då main är en avkommling av huvudklassen om */
     background-color: white; /*Backgrund*/
     align-content: center; /*Alla block ska ligga i centrum*/
     text-align:center;/*Texten ska sentreras*/
 }
-* > .Om { /*Om ligger under rästen*/
-    background-color: aliceblue;/*backgrund färg*/
-}
-p { /*Text tag*/
+
+p { /*För alla P element */
     font-size: 1rem;  /*Storlek av text tagg*/
 }
 
@@ -64,7 +63,7 @@ header {
 
 .dropdown-content a { /*a taggarna i dropdownwn*/
         color: black; /*text färg*/
-        padding: 12px 16px; /*Mällan avståndet*/
+        padding: 15px 16px; /*Mällan avståndet*/
         text-decoration: none; /*Tar bort understräk*/
         display: block; /*Visa block*/
     }
@@ -125,13 +124,13 @@ table {
     width: 100%; /*tjocklek*/
 }
 
-th {
+td {
     padding: 8px; /*spac mellan*/
 }
 tr:nth-child(even){ /* Bara gämna tr får denna fuktion*/
     background-color: #c3c3c3; /*Backgrund*/
 }
-td {
+th {
     font-size: x-large; /*Lika stro som x*/
 }
 th, td {
@@ -142,14 +141,14 @@ th, td {
 /*Dator info SLUT*/
 /*Main SLUT*/
 
-dl { 
+ol { 
     list-style-type: none; /*tar bort list typen*/
     margin-left:auto;
     margin-right:auto;
     
 }
 
-dd {
+ol > li {
     float: left; /*flyta ut listan(Diagonalt)*/
     text-align: center; /*text i center*/
     font-size: 2em; /*font storlek*/
@@ -157,7 +156,8 @@ dd {
     background-color: gray; /* backgrund*/
     border: 1px solid black; /*barigär*/
     border-radius: 50px; /*Runda hörn*/
-    width: 130%; /*tjockleken*/
+    width: 70%; /*tjockleken*/
+    margin-bottom: 1vh;
 }
 
 /*footer start*/
@@ -201,9 +201,12 @@ a:focus{
 
 }
 a:hover{
-        background-color: red; /*när man är över med Muspekaren*/
+     background-color: red; /*när man är över med Muspekaren*/
 }
 
+a:active{
+    background-color: green;
+}
 
 
 
